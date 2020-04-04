@@ -23,7 +23,7 @@ __construct(?string $namespace = null, ?string $routingTableFilepath = null, ?st
 Optional namespace your routing table endpoints start with. If no namespace is provided, endpoints have to be configured with their fully qualified namespace in routing table.  
 
 **routingTableFilepath**  
-Optional filepath to the routing table INI file. It is relative to your project's root directory. If no filepath is provided, default (*config/routing.ini*) is used.  
+Optional filepath to the routing table INI file. It is relative to your project's root directory. If no filepath is provided, default (*config/routing.ini*) is used ([more information](#the-routing-table)).  
 
 **configFilepath**  
 Optional filepath to a configuration INI file. It is relative to your project's root directory. If no filepath is provided, default (*config/routyi.ini*) is used. This filepath is only relevant if you are using a subdirectory ([more information](#using-a-subdirectory)).
@@ -68,6 +68,6 @@ The default filepath is *config/routyi.ini*. If you want to change this, see con
 ```php
 (new \Kiryi\Routyi\Router('MyProject\\Controller\\', 'configuration/routes.ini'))->route();
 ```
-URL *mydomain.com* will route to `MyProject\Controller\HomeController`.
-URL *mydomain.com/about* will route to `MyProject\Controller\AboutController`.
+URL *mydomain.com* will route to `MyProject\Controller\HomeController`.  
+URL *mydomain.com/about* will route to `MyProject\Controller\AboutController`.  
 URL *mydomain.com/wrong/route* will route to `MyProject\Controller\HomeController`. Since */wrong/route* is not a matching route, the part is interpreted as parameters and passed to the `run` method of the `HomeController`.
