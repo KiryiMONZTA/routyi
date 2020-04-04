@@ -60,7 +60,7 @@ class Router
         if ($uriPath == $route) {
             return [];
         } else {
-            return explode('/', substr($uriPath, strlen($route) + 1));
+            return explode('/', $this->pathyi->format(substr($uriPath, strlen($route))));
         }
     }
 
