@@ -21,11 +21,12 @@ class Router
         ?string $routingTableFilepath = null,
         ?string $configFilepath = null
     ) {
+        $this->pathyi = new Pathyi();
+        
         $this->namespace = $namespace;
         $this->setFilepaths($routingTableFilepath, $configFilepath);
 
         $this->searcher = new Helper\EndpointSearcher($this->routingTableFilepath);
-        $this->pathyi = new Pathyi();
     }
 
     public function route(): void
