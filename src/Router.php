@@ -7,8 +7,7 @@ use Kiryi\Pathyi\Formatter as Pathyi;
 
 class Router
 {
-    //const ROOTDIR = __DIR__ '/../../../';
-    const ROOTDIR = __DIR__ . '/../../test-project/';
+    const ROOTDIR = __DIR__ . '/../../../../';
 
     private ?string $namespace = null;
     private string $routingTableFilepath = 'config/routing.ini';
