@@ -4,7 +4,7 @@ namespace Kiryi\Routyi\Helper;
 
 use Kiryi\Inyi\Reader as Inyi;
 
-class EndpointSearcher
+class EndpointSearcher extends \Exception
 {
     private ?Inyi $inyi = null;
 

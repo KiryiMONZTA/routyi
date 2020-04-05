@@ -5,7 +5,7 @@ namespace Kiryi\Routyi\Helper;
 use Kiryi\Inyi\Reader as Inyi;
 use Kiryi\Pathyi\Formatter as Pathyi;
 
-class UriPathGetter
+class UriPathGetter extends \Exception
 {
     const INIKEY_SUBDIR = 'routyi::subDir';
 
@@ -14,7 +14,6 @@ class UriPathGetter
     public function __construct(string $configFilepath)
     {
         $this->configFilepath = $configFilepath;
-        
     }
 
     public function get(): string
