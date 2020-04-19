@@ -12,7 +12,7 @@ First set up the [routing table](#the-routing-table). Then use:
 $routyi = new \Kiryi\Routyi\Router());
 $routyi->route();
 ```
-All endpoint classes have to implement the `EndpointInterface` and so have a method `run(array $params)`.
+All endpoint classes have to implement the `Kiryi\Routyi\EndpointInterface` and so must have a method `run(array $params)`.
 
 ## Constructor Definition
 ```php
